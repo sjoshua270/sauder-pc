@@ -46,7 +46,7 @@
             padding: 0;
         }
 
-        #message {
+        .message {
             background: white;
             max-width: 552px;
             margin: 100px auto 16px;
@@ -57,21 +57,21 @@
             box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.12), 5px 6px 10px rgba(0, 0, 0, 0.24);
         }
 
-        #message h2 {
+        .message h2 {
             color: #ffa100;
             font-weight: bold;
             font-size: 16px;
             margin: 0 0 8px;
         }
 
-        #message h1 {
+        .message h1 {
             font-size: 22px;
             font-weight: 300;
             color: rgba(0, 0, 0, 0.6);
             margin: 0 0 16px;
         }
 
-        #message p {
+        .message p {
             line-height: 140%;
             margin: 16px 0 24px;
             font-size: 14px;
@@ -86,7 +86,7 @@
         }
 
         @media (max-width: 600px) {
-            body, #message {
+            body, .message {
                 margin-top: 0;
                 background: white;
                 box-shadow: none;
@@ -99,7 +99,7 @@
 
 <!-- Always shows a header, even in smaller screens. -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header mdl-layout__header--transparent">
+    <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
             <!-- Title -->
             <span class="mdl-layout-title">Sauder PC</span>
@@ -116,12 +116,25 @@
     </header>
     <main class="mdl-layout__content">
         <div class="page-content">
-            <div id="message" class="loading">
+            <div id="home" class="message">
                 <h2>Welcome</h2>
                 <h1>Sauder PC gives a personal touch to PC and phone repair</h1>
                 <p>Contact me to schedule an appointment:</p>
                 <p>Phone: (317) J-SAUDER - (317) 572-8337</p>
                 <p>Email: <a href="mailto:jsauder@sauderpc.com">jsauder@sauderapps.com</a></p>
+            </div>
+            <div id="about" class="message">
+                <h2>About</h2>
+                <h1>We are a small family business</h1>
+                <p>Sauder PC is a two-person business run by myself and my wife.</p>
+                <p>When my wife and I decided to stay in Harrisonburg after graduating from Eastern
+                    Mennonite University, I started looking around my community and realized that I
+                    could assist those who may need help with their technology. Computers, smart
+                    phones, cameras, printers, you name it. I am out here to help and provide honest
+                    assistance in repairing, setting up, or replacing any home technology that you
+                    may need assistance with.</p>
+                <p>If you have any questions at all, please contact us and I can walk you through
+                    things and hopefully assist you in a personal manner.</p>
             </div>
         </div>
     </main>
