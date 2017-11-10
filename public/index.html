@@ -15,22 +15,22 @@
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/res/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/res/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/res/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/res/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/res/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/res/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/res/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/res/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/res/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/res/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/res/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/res/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/res/favicon-16x16.png">
-    <link rel="manifest" href="/res/manifest.json">
+    <link rel="apple-touch-icon" sizes="57x57" href="res/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="res/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="res/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="res/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="res/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="res/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="res/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="res/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="res/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="res/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="res/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="res/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="res/favicon-16x16.png">
+    <link rel="manifest" href="res/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/res/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="../res/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -49,7 +49,7 @@
         .message {
             background: white;
             max-width: 552px;
-            margin: 100px auto 16px;
+            margin: 50px auto 16px;
             padding: 32px 24px;
             border-radius: 10px;
             transition-duration: 1000ms;
@@ -107,22 +107,24 @@
             <div class="mdl-layout-spacer"></div>
             <!-- Navigation -->
             <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="/">Home</a>
-                <a class="mdl-navigation__link" href="/about">About</a>
+                <a class="mdl-navigation__link" href="#home">Home</a>
+                <a class="mdl-navigation__link" href="#about">About</a>
+                <a class="mdl-navigation__link" href="#contact">Contact</a>
             </nav>
             <!--Logo-->
             <img id="logo" src="res/favicon-32x32.png">
         </div>
     </header>
+
+    <!--Page Content-->
     <main class="mdl-layout__content">
         <div class="page-content">
+            <!--Home-->
             <div id="home" class="message">
                 <h2>Welcome</h2>
                 <h1>Sauder PC gives a personal touch to PC and phone repair</h1>
-                <p>Contact me to schedule an appointment:</p>
-                <p>Phone: (317) J-SAUDER - (317) 572-8337</p>
-                <p>Email: <a href="mailto:jsauder@sauderpc.com">jsauder@sauderapps.com</a></p>
             </div>
+            <!--About-->
             <div id="about" class="message">
                 <h2>About</h2>
                 <h1>We are a small family business</h1>
@@ -133,8 +135,16 @@
                     phones, cameras, printers, you name it. I am out here to help and provide honest
                     assistance in repairing, setting up, or replacing any home technology that you
                     may need assistance with.</p>
-                <p>If you have any questions at all, please contact us and I can walk you through
+                <p>If you have any questions at all, please <a href="#contact">contact us</a> and I can walk you through
                     things and hopefully assist you in a personal manner.</p>
+            </div>
+            <!--Contact-->
+            <div id="contact" class="message">
+                <h2>Contact</h2>
+                <h1>Contact us to schedule an appointment:</h1>
+                <span>Phone: (317) J-SAUDER - (317) 572-8337</span>
+                <br>
+                <span>Email: <a href="mailto:jsauder@sauderpc.com">jsauder@sauderapps.com</a></span>
             </div>
         </div>
     </main>
@@ -160,6 +170,42 @@
         } catch (e) {
         }
     });
+    // Select all links with hashes
+    $('a[href*="#"]')
+    // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function (event) {
+            // On-page links
+            if (
+                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                &&
+                location.hostname == this.hostname
+            ) {
+                // Figure out element to scroll to
+                let target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                // Does a scroll target exist?
+                if (target.length) {
+                    // Only prevent default if animation is actually gonna happen
+                    event.preventDefault();
+                    $('html, body, .mdl-layout--fixed-header, .mdl-layout__content, .page-content').animate({
+                        scrollTop: target.offset().top
+                    }, 500, function () {
+                        // Callback after animation
+                        // Must change focus!
+                        let $target = $(target);
+                        $target.focus();
+                        if ($target.is(":focus")) { // Checking if the target was focused
+                            return false;
+                        } else {
+                            $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                            $target.focus(); // Set focus again
+                        }
+                    });
+                }
+            }
+        });
 </script>
 </body>
 </html>
