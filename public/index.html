@@ -69,22 +69,45 @@
             <div class="page-content">
                 <!--Home-->
                 <div id="home" class="message">
-                    <h2>Welcome</h2>
-                    <h1>Need help or advice with your phone or computer? We're here to help!</h1>
-                    <form action="#">
-                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="first_name">
-                            <label class="mdl-textfield__label" for="first_name">First Name</label>
-                        </div>
-                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="last_name">
-                            <label class="mdl-textfield__label" for="last_name">Last Name</label>
-                        </div>
-                    </form>
-                    <!-- Raised button with ripple -->
-                    <button id="submit_ticket" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-                        Submit request
-                    </button>
+                    <div id="request_form">
+                        <h2>Welcome</h2>
+                        <h1>Need help or advice with your phone or computer? We're here to help!
+                            Fill out this simple form, and we will get in touch with you</h1>
+                        <form action="#">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="first_name_field">
+                                <label class="mdl-textfield__label" for="first_name_field">First Name</label>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="last_name_field">
+                                <label class="mdl-textfield__label" for="last_name_field">Last Name</label>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="tel" id="phone_field">
+                                <label class="mdl-textfield__label" for="phone_field">Phone number</label>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="email" id="email_field">
+                                <label class="mdl-textfield__label" for="email_field">Email address</label>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="tel" id="address_field">
+                                <label class="mdl-textfield__label" for="address_field">Address</label>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <textarea class="mdl-textfield__input" type="text" rows="3" id="request_field"></textarea>
+                                <label class="mdl-textfield__label" for="request_field">What can we help you with?</label>
+                            </div>
+                        </form>
+                        <!-- Raised button with ripple -->
+                        <button id="submit_ticket" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                            Submit request
+                        </button>
+                    </div>
+                    <div id="thank_you">
+                        <h2>Thank you!</h2>
+                        <h1>We will look into your request and be in touch as soon as we can.</h1>
+                    </div>
                 </div>
                 <!--About-->
                 <div id="about" class="message">
