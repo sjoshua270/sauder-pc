@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -91,7 +92,9 @@
         }
 
         @media (max-width: 600px) {
-            body, .message {
+
+            body,
+            .message {
                 margin-top: 0;
                 background: white;
                 box-shadow: none;
@@ -100,117 +103,119 @@
         }
     </style>
 </head>
+
 <body>
 
-<!-- Always shows a header, even in smaller screens. -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
-            <!-- Title -->
-            <span class="mdl-layout-title">Sauder PC</span>
-            <!-- Add spacer, to align navigation to the right -->
-            <div class="mdl-layout-spacer"></div>
-            <!-- Navigation -->
-            <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="#home">Home</a>
-                <a class="mdl-navigation__link" href="#about">About</a>
-                <a class="mdl-navigation__link" href="#contact">Contact</a>
-            </nav>
-            <!--Logo-->
-            <img id="header-logo" src="res/icon_white.png">
-        </div>
-    </header>
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Sauder PC</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation -->
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="#home">Home</a>
+                    <a class="mdl-navigation__link" href="#about">About</a>
+                    <a class="mdl-navigation__link" href="#contact">Contact</a>
+                </nav>
+                <!--Logo-->
+                <img id="header-logo" src="res/icon_white.png">
+            </div>
+        </header>
 
-    <!--Page Content-->
-    <main class="mdl-layout__content">
-        <div class="page-content">
-            <!--Home-->
-            <div id="home" class="message">
-                <h2>Welcome</h2>
-                <h1>Sauder PC gives a personal touch to PC and phone repair</h1>
+        <!--Page Content-->
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <!--Home-->
+                <div id="home" class="message">
+                    <h2>Welcome</h2>
+                    <h1>Sauder PC gives a personal touch to PC and phone repair</h1>
+                </div>
+                <!--About-->
+                <div id="about" class="message">
+                    <h2>About</h2>
+                    <h1>We are a small family business</h1>
+                    <p>Sauder PC is a two-person business run by myself and my wife.</p>
+                    <p>When my wife and I decided to stay in Harrisonburg after graduating from Eastern
+                        Mennonite University, I started looking around my community and realized that I
+                        could assist those who may need help with their technology. Computers, smart
+                        phones, cameras, printers, you name it. I am out here to help and provide honest
+                        assistance in repairing, setting up, or replacing any home technology that you
+                        may need assistance with.</p>
+                    <p>If you have any questions at all, please <a href="#contact">contact us</a> and I can walk you
+                        through
+                        things and hopefully assist you in a personal manner.</p>
+                </div>
+                <!--Contact-->
+                <div id="contact" class="message">
+                    <h2>Contact</h2>
+                    <h1>Contact us to schedule an appointment:</h1>
+                    <span>Phone: (317) J-SAUDER - (317) 572-8337</span>
+                    <br>
+                    <span>Email: <a href="mailto:jsauder@sauderpc.com">jsauder@sauderapps.com</a></span>
+                </div>
             </div>
-            <!--About-->
-            <div id="about" class="message">
-                <h2>About</h2>
-                <h1>We are a small family business</h1>
-                <p>Sauder PC is a two-person business run by myself and my wife.</p>
-                <p>When my wife and I decided to stay in Harrisonburg after graduating from Eastern
-                    Mennonite University, I started looking around my community and realized that I
-                    could assist those who may need help with their technology. Computers, smart
-                    phones, cameras, printers, you name it. I am out here to help and provide honest
-                    assistance in repairing, setting up, or replacing any home technology that you
-                    may need assistance with.</p>
-                <p>If you have any questions at all, please <a href="#contact">contact us</a> and I can walk you through
-                    things and hopefully assist you in a personal manner.</p>
-            </div>
-            <!--Contact-->
-            <div id="contact" class="message">
-                <h2>Contact</h2>
-                <h1>Contact us to schedule an appointment:</h1>
-                <span>Phone: (317) J-SAUDER - (317) 572-8337</span>
-                <br>
-                <span>Email: <a href="mailto:jsauder@sauderpc.com">jsauder@sauderapps.com</a></span>
-            </div>
-        </div>
-    </main>
-</div>
+        </main>
+    </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+            // // The Firebase SDK is initialized and available here!
+            //
+            // firebase.auth().onAuthStateChanged(user => { });
+            // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+            // firebase.messaging().requestPermission().then(() => { });
+            // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+            //
+            // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-        try {
-            let app = firebase.app();
-        } catch (e) {
-        }
-    });
-    // Select all links with hashes
-    $('a[href*="#"]')
-    // Remove links that don't actually link to anything
-        .not('[href="#"]')
-        .not('[href="#0"]')
-        .click(function (event) {
-            // On-page links
-            if (
-                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-                &&
-                location.hostname == this.hostname
-            ) {
-                // Figure out element to scroll to
-                let target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                // Does a scroll target exist?
-                if (target.length) {
-                    // Only prevent default if animation is actually gonna happen
-                    event.preventDefault();
-                    $('html, body, .mdl-layout--fixed-header, .mdl-layout__content, .page-content').animate({
-                        scrollTop: target.offset().top
-                    }, 500, function () {
-                        // Callback after animation
-                        // Must change focus!
-                        let $target = $(target);
-                        $target.focus();
-                        if ($target.is(":focus")) { // Checking if the target was focused
-                            return false;
-                        } else {
-                            $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-                            $target.focus(); // Set focus again
-                        }
-                    });
-                }
+            try {
+                let app = firebase.app();
+            } catch (e) {
             }
         });
-</script>
+        // Select all links with hashes
+        $('a[href*="#"]')
+            // Remove links that don't actually link to anything
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .click(function (event) {
+                // On-page links
+                if (
+                    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                    &&
+                    location.hostname == this.hostname
+                ) {
+                    // Figure out element to scroll to
+                    let target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    // Does a scroll target exist?
+                    if (target.length) {
+                        // Only prevent default if animation is actually gonna happen
+                        event.preventDefault();
+                        $('html, body, .mdl-layout--fixed-header, .mdl-layout__content, .page-content').animate({
+                            scrollTop: target.offset().top
+                        }, 500, function () {
+                            // Callback after animation
+                            // Must change focus!
+                            let $target = $(target);
+                            $target.focus();
+                            if ($target.is(":focus")) { // Checking if the target was focused
+                                return false;
+                            } else {
+                                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                                $target.focus(); // Set focus again
+                            }
+                        });
+                    }
+                }
+            });
+    </script>
 </body>
+
 </html>
